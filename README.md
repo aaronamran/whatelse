@@ -55,7 +55,6 @@ All of these are available by default on supported distributions.
 ## Installation
 
 Clone the repository:
-
 ```
 git clone https://github.com/aaronamran/whatelse
 cd whatelse
@@ -65,14 +64,12 @@ chmod +x whatelse.sh
 ### Optional: Make it available globally
 
 To run `whatelse` like a built-in command without `./`:
-
 ```bash
 sudo cp whatelse.sh /usr/local/bin/whatelse
 sudo chmod +x /usr/local/bin/whatelse
 ```
 
 After this, you can run:
-
 ```
 whatelse postgresql
 ```
@@ -90,10 +87,34 @@ whatelse <service-name>
 ```
 
 Examples:
-
 ```
-whatelse nginx
-whatelse postgresql
+whatelse snapd
+```
+
+Output:
+```
+┌──(kali㉿kali)-[~]
+└─$ sudo whatelse snapd                                              
+Service: snapd.service
+--------------------------------------------------
+State:        active
+Enabled:      enabled
+Main PID:     816
+
+[Reverse Dependencies]
+  -   multi-user.target
+  -   graphical.target
+
+[Target Membership]
+  -   multi-user.target
+  -   graphical.target
+
+[Socket Activation]
+  - snapd.socket                                 disabled        disabled
+
+[Active Connections]
+  None
+--------------------------------------------------
 ```
 
 ---
