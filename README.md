@@ -57,7 +57,7 @@ All of these are available by default on supported distributions.
 Clone the repository:
 
 ```
-git clone <repo-url>
+git clone https://github.com/aaronamran/whatelse
 cd whatelse
 chmod +x whatelse.sh
 ```
