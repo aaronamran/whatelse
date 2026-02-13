@@ -3,7 +3,8 @@
 # ==========================================================
 # whatelse - Service dependency visibility tool
 # Portable across systemd-based Linux distributions
-# Developed by @aaronamran
+# Developed by @aaronamran with MIT License
+# GitHub repository: https://github.com/aaronamran/whatelse/
 # Requirements: bash, systemctl, ps, awk, grep, sort
 # Optional: lsof (for connection visibility)
 # ==========================================================
