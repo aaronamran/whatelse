@@ -18,16 +18,24 @@ Usage:
   sudo whatelse [--output FILE] SERVICE
 
 Description:
-  Displays:
-    - Service state
-    - Reverse systemd dependencies
-    - Target membership
-    - Socket activation status
-    - Active network connections (if lsof installed)
+  Displays key information about a systemd service before you stop or restart it.
 
-This tool is read-only and makes no changes.
+  - Service state:
+      Shows whether the service is currently running or inactive.
+  - Reverse systemd dependencies:
+      Lists other services or units that depend on this service; stopping it may affect them.
+  - Target membership:
+      Shows which systemd targets include this service (e.g., multi-user.target), 
+      helping you understand its role in boot/operation.
+  - Socket activation status:
+      Indicates if the service is triggered by a socket (may start automatically when needed).
+  - Active network connections (if lsof installed):
+      Lists listening ports and how many clients are connected to the service.
+
+This tool is read-only and makes no changes to the system.
 EOF
 }
+
 
 # -----------------------------
 # Argument parsing
